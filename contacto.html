@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto — The Owl Sector</title>
+<meta name="description" content="Contáctanos para una cotización sin compromiso. Escríbenos por formulario o WhatsApp.">
+<meta property="og:title" content="Contacto — The Owl Sector">
+<meta property="og:description" content="Contáctanos para una cotización sin compromiso. Escríbenos por formulario o WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="The Owl Sector" width="32" height="32">
+      <span>The Owl <span class="accent">Sector</span></span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="index.html" class="nav-link">Inicio</a><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a><a href="servicios.html" class="nav-link">Servicios</a><a href="portafolio.html" class="nav-link">Portafolio</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="contacto.html" class="btn-primary">Contacto</a>
+    </nav>
+    <div class="mobile-actions">
+      <button class="theme-toggle" id="themeToggleM" aria-label="Cambiar tema"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="container">
+      <nav>
+        <a href="index.html" class="">Inicio</a><a href="sobre-nosotros.html" class="">Sobre Nosotros</a><a href="servicios.html" class="">Servicios</a><a href="portafolio.html" class="">Portafolio</a>
+        <a href="contacto.html" style="color:var(--primary);font-weight:600">Contacto</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section style="border-bottom:1px solid var(--border)">
+  <div class="container section-pad">
+    <p class="eyebrow">Contacto</p>
+    <h1 class="h1 mt-3 max-w-3xl">Solicita tu cotización sin compromiso.</h1>
+    <p class="lead mt-6">Cuéntanos sobre tu proyecto. Te responderemos con una propuesta clara, realista y a la medida.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="padding:4rem 1.5rem">
+    <div class="contact-grid">
+      <form id="contactForm" class="card lg" novalidate>
+        <h2 style="font-size:1.5rem;font-weight:700">Envíanos un mensaje</h2>
+        <p class="muted text-sm mt-2">Completa el formulario y te responderemos lo antes posible.</p>
+        <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:1.25rem">
+          <div>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" maxlength="100" required placeholder="Tu nombre">
+            <p class="field-error" data-err="name" style="display:none"></p>
+          </div>
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" maxlength="255" required placeholder="tucorreo@ejemplo.com">
+            <p class="field-error" data-err="email" style="display:none"></p>
+          </div>
+          <div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" maxlength="1000" rows="6" required placeholder="Cuéntanos sobre tu proyecto…"></textarea>
+            <div class="flex items-center justify-between mt-2">
+              <p class="field-error" data-err="message" style="display:none"></p>
+              <span class="muted text-xs" id="counter">0/1000</span>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary lg" style="width:100%;justify-content:center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> Enviar mensaje</button>
+        </div>
+      </form>
+
+      <aside class="aside-stack">
+        <div class="gradient-card">
+          <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin-top:1rem">Hablemos por WhatsApp</h3>
+          <p class="muted text-sm mt-2">Si prefieres, escríbenos directamente. Es la forma más rápida de iniciar una conversación.</p>
+          <a id="whatsappBtn" href="https://wa.me/522223541652" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;border:1px solid color-mix(in oklab,var(--primary) 40%,transparent);background:color-mix(in oklab,var(--primary) 10%,transparent);padding:.625rem 1.25rem;border-radius:.5rem;color:var(--primary);font-weight:600;transition:all .15s"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Abrir WhatsApp</a>
+        </div>
+
+        <div class="card lg">
+          <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+          <h3 style="font-size:1.25rem;font-weight:700;margin-top:1rem">Correo</h3>
+          <p class="muted text-sm mt-2">¿Prefieres email? Escríbenos a:</p>
+          <a href="mailto:owlsectorgeneral@gmail.com" class="font-mono text-sm mt-2" style="display:inline-block;color:var(--primary);word-break:break-all">owlsectorgeneral@gmail.com</a>
+        </div>
+
+        <div style="border:1px solid color-mix(in oklab,var(--primary) 30%,transparent);background:color-mix(in oklab,var(--primary) 5%,transparent);padding:1.5rem;border-radius:1rem">
+          <p class="eyebrow">Tip</p>
+          <p class="text-sm mt-2">Solicita tu cotización: cuéntanos qué necesitas, plazos y presupuesto aproximado. Mientras más claro sea tu mensaje, mejor será nuestra propuesta.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="brand">
+          <img src="assets/logo.png" alt="The Owl Sector" width="32" height="32">
+          <span>The Owl Sector</span>
+        </div>
+        <p class="muted text-sm mt-3" style="max-width:20rem">Soluciones tecnológicas con enfoque en investigación y conocimiento aplicado.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>owlsectorgeneral@gmail.com</li>
+          <li>WhatsApp directo desde la sección de contacto</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="year"></span> The Owl Sector. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  // Theme
+  function setIcon(){
+    var dark = document.documentElement.classList.contains('dark');
+    var sun = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
+    var moon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    document.querySelectorAll('#themeToggle, #themeToggleM').forEach(function(b){ b.innerHTML = dark ? sun : moon; });
+  }
+  function toggleTheme(){
+    var dark = document.documentElement.classList.toggle('dark');
+    try{ localStorage.setItem('theme', dark?'dark':'light'); }catch(e){}
+    setIcon();
+  }
+  document.querySelectorAll('#themeToggle, #themeToggleM').forEach(function(b){ b.addEventListener('click', toggleTheme); });
+  setIcon();
+
+  // Mobile menu
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('navMobile');
+  if(btn && nav){
+    var menuI = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>`;
+    var xI = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.innerHTML = open ? xI : menuI;
+    });
+  }
+
+  // Year
+  var y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
+})();
+</script>
+
+
+<script>
+const WA_NUMBER = '522223541652';
+const EMAIL = 'owlsectorgeneral@gmail.com';
+const form = document.getElementById('contactForm');
+const counter = document.getElementById('counter');
+const msg = document.getElementById('message');
+const toast = document.getElementById('toast');
+
+msg.addEventListener('input', () => { counter.textContent = msg.value.length + '/1000'; });
+
+function showError(field, text){
+  const el = document.querySelector(`[data-err="${field}"]`);
+  el.textContent = text; el.style.display = text ? 'block' : 'none';
+}
+function showToast(text){
+  toast.textContent = text; toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+  let ok = true;
+  showError('name',''); showError('email',''); showError('message','');
+  if(name.length < 2){ showError('name','El nombre debe tener al menos 2 caracteres'); ok = false; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showError('email','Ingresa un correo electrónico válido'); ok = false; }
+  if(message.length < 10){ showError('message','El mensaje debe tener al menos 10 caracteres'); ok = false; }
+  if(!ok) return;
+
+  const subject = encodeURIComponent(`Solicitud de cotización — ${name}`);
+  const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`);
+  window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  setTimeout(() => {
+    showToast('¡Gracias! Abrimos tu cliente de correo para enviar el mensaje.');
+    form.reset(); counter.textContent = '0/1000';
+  }, 400);
+});
+
+// Update WhatsApp link with dynamic message
+const waBtn = document.getElementById('whatsappBtn');
+function updateWA(){
+  const name = form.name.value.trim();
+  const message = form.message.value.trim();
+  const text = message
+    ? `Hola The Owl Sector, soy ${name}. ${message}`.trim()
+    : 'Hola The Owl Sector, me gustaría solicitar una cotización.';
+  waBtn.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+['name','email','message'].forEach(id => document.getElementById(id).addEventListener('input', updateWA));
+</script>
+
+</body>
+</html>

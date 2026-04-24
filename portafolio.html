@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portafolio — The Owl Sector</title>
+<meta name="description" content="Explora los proyectos de The Owl Sector: desarrollo web, móvil, estadística y matemáticas aplicadas.">
+<meta property="og:title" content="Portafolio — The Owl Sector">
+<meta property="og:description" content="Explora los proyectos de The Owl Sector: desarrollo web, móvil, estadística y matemáticas aplicadas.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="The Owl Sector" width="32" height="32">
+      <span>The Owl <span class="accent">Sector</span></span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="index.html" class="nav-link">Inicio</a><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a><a href="servicios.html" class="nav-link">Servicios</a><a href="portafolio.html" class="nav-link active">Portafolio</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <a href="contacto.html" class="btn-primary">Contacto</a>
+    </nav>
+    <div class="mobile-actions">
+      <button class="theme-toggle" id="themeToggleM" aria-label="Cambiar tema"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="container">
+      <nav>
+        <a href="index.html" class="">Inicio</a><a href="sobre-nosotros.html" class="">Sobre Nosotros</a><a href="servicios.html" class="">Servicios</a><a href="portafolio.html" class="active">Portafolio</a>
+        <a href="contacto.html" style="color:var(--primary);font-weight:600">Contacto</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section style="border-bottom:1px solid var(--border)">
+  <div class="container section-pad">
+    <p class="eyebrow">Portafolio</p>
+    <h1 class="h1 mt-3 max-w-3xl">Proyectos que reflejan nuestra forma de trabajar.</h1>
+    <p class="lead mt-6">Una selección de trabajos terminados y en progreso. Todos desarrollados bajo el sello de The Owl Sector.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="padding:3rem 1.5rem">
+    <div class="filters" id="filters">
+      <button class="pill active" data-cat="all">Todos</button>
+      <button class="pill" data-cat="web">Desarrollo Web</button>
+      <button class="pill" data-cat="mobile">Apps Móviles</button>
+      <button class="pill" data-cat="stats">Estadística</button>
+      <button class="pill" data-cat="math">Matemáticas</button>
+    </div>
+    <div class="mt-10 grid grid-2 grid-lg-3" id="projGrid" style="gap:1.5rem"></div>
+    <p id="emptyMsg" class="text-center muted mt-10" style="display:none">No hay proyectos en esta categoría todavía.</p>
+  </div>
+</section>
+
+<section class="section-bordered section-surface">
+  <div class="container" style="padding:4rem 1.5rem;text-align:center">
+    <h2 style="font-size:1.5rem;font-weight:700">¿Te imaginas tu proyecto aquí?</h2>
+    <a href="contacto.html" class="btn-primary lg mt-6">Iniciar conversación</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="brand">
+          <img src="assets/logo.png" alt="The Owl Sector" width="32" height="32">
+          <span>The Owl Sector</span>
+        </div>
+        <p class="muted text-sm mt-3" style="max-width:20rem">Soluciones tecnológicas con enfoque en investigación y conocimiento aplicado.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>owlsectorgeneral@gmail.com</li>
+          <li>WhatsApp directo desde la sección de contacto</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="year"></span> The Owl Sector. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  // Theme
+  function setIcon(){
+    var dark = document.documentElement.classList.contains('dark');
+    var sun = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
+    var moon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    document.querySelectorAll('#themeToggle, #themeToggleM').forEach(function(b){ b.innerHTML = dark ? sun : moon; });
+  }
+  function toggleTheme(){
+    var dark = document.documentElement.classList.toggle('dark');
+    try{ localStorage.setItem('theme', dark?'dark':'light'); }catch(e){}
+    setIcon();
+  }
+  document.querySelectorAll('#themeToggle, #themeToggleM').forEach(function(b){ b.addEventListener('click', toggleTheme); });
+  setIcon();
+
+  // Mobile menu
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('navMobile');
+  if(btn && nav){
+    var menuI = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>`;
+    var xI = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.innerHTML = open ? xI : menuI;
+    });
+  }
+
+  // Year
+  var y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
+})();
+</script>
+
+
+<script>
+const PROJECTS = [{"id": "iavep", "name": "Sitio web — Instituto de Artes Visuales del Estado de Puebla", "desc": "Sitio informativo y de contacto para el Instituto: presenta información institucional, oferta de carreras y un canal directo de contacto para aspirantes y público interesado.", "tech": ["React", "TanStack Start", "TypeScript", "Tailwind CSS"], "image": "proj-iavep.jpg", "cat": "web", "status": "En progreso", "client": "Instituto de Artes Visuales del Estado de Puebla"}, {"id": "gym-nagger", "name": "Gym Nagger — App Android", "desc": "App que envía notificaciones recordándote ir al gimnasio hasta que tomes una foto de evidencia. Un modelo de IA verifica si efectivamente estás en un gimnasio para detener las notificaciones.", "tech": ["Android Studio", "Python", "PythonAnywhere", "Hugging Face", "Modelos de IA"], "image": "proj-gymnagger.jpg", "cat": "mobile", "status": "Terminado"}, {"id": "mensajeria", "name": "Mensajería empresarial privada", "desc": "Servicio de mensajería privado para empresas: control total sobre los mensajes enviados dentro de una red privada de dispositivos autorizados, con panel administrativo para auditar el flujo de datos.", "tech": ["Android", "Backend privado", "Panel de administración"], "image": "proj-messaging.jpg", "cat": "mobile", "status": "En progreso"}, {"id": "stats-done", "name": "Proyecto estadístico (referencia)", "desc": "Espacio reservado para próximos proyectos terminados del área de estadística. Próximamente compartiremos casos reales aplicados.", "tech": ["Python", "R", "Análisis de datos"], "image": "proj-stats.jpg", "cat": "stats", "status": "Terminado"}, {"id": "stats-prog", "name": "Proyecto estadístico (en desarrollo)", "desc": "Estamos trabajando en un nuevo proyecto del área de estadística. Pronto publicaremos los detalles aquí.", "tech": ["Python", "Modelos predictivos"], "image": "proj-predict.jpg", "cat": "stats", "status": "En progreso"}, {"id": "math-done", "name": "Proyecto matemático (referencia)", "desc": "Espacio reservado para próximos proyectos terminados del área de matemáticas aplicadas y optimización.", "tech": ["Optimización", "Modelado matemático"], "image": "proj-corp.jpg", "cat": "math", "status": "Terminado"}, {"id": "math-prog", "name": "Proyecto matemático (en desarrollo)", "desc": "Trabajamos en un nuevo proyecto matemático. Próximamente compartiremos resultados y aplicaciones.", "tech": ["Investigación de operaciones", "Algoritmos"], "image": "proj-math.jpg", "cat": "math", "status": "En progreso"}];
+const CATS = {"web": "Desarrollo Web", "mobile": "Apps Móviles", "stats": "Estadística", "math": "Matemáticas"};
+const grid = document.getElementById('projGrid');
+const empty = document.getElementById('emptyMsg');
+function render(cat){
+  const list = cat === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === cat);
+  empty.style.display = list.length ? 'none' : 'block';
+  grid.innerHTML = list.map(p => `
+    <article class="proj-card">
+      <div class="thumb"><img src="assets/${p.image}" alt="${p.name}" loading="lazy"></div>
+      <div class="body">
+        <div class="flex items-center gap-2">
+          <span class="tag">${CATS[p.cat]}</span>
+          <span class="muted">·</span>
+          <span class="tag-status ${p.status === 'Terminado' ? 'done' : 'progress'}">${p.status}</span>
+        </div>
+        <h3 class="font-semibold mt-2" style="font-size:1.125rem">${p.name}</h3>
+        <p class="muted text-sm mt-2" style="flex:1">${p.desc}</p>
+        <div class="mt-4 flex flex-wrap gap-2">${p.tech.map(t => `<span class="tech-chip">${t}</span>`).join('')}</div>
+        ${p.client ? `<p class="font-mono mt-3" style="font-size:.6875rem;color:var(--muted-foreground)">Cliente: ${p.client}</p>` : ''}
+      </div>
+    </article>`).join('');
+}
+document.querySelectorAll('#filters .pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#filters .pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.cat);
+  });
+});
+render('all');
+</script>
+
+</body>
+</html>
